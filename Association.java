@@ -12,7 +12,7 @@ public class Association<K extends Comparable<K>, V> implements Comparable<Assoc
 
     @Override
     public int compareTo(Association<K, V> other) {
-        // Ordenamos basándonos en la llave (palabra en inglés)
+        
         return this.key.compareTo(other.getKey());
     }
 
