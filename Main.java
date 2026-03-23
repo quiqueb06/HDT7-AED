@@ -11,7 +11,7 @@ public class Main {
             while (dictScanner.hasNextLine()) {
                 String line = dictScanner.nextLine().trim();
                 if (!line.isEmpty()) {
-                    // Quitar paréntesis y separar por coma
+
                     line = line.replace("(", "").replace(")", "");
                     String[] parts = line.split(",");
                     if (parts.length == 2) {
@@ -36,7 +36,7 @@ public class Main {
             Scanner textScanner = new Scanner(new File("texto.txt"));
             while (textScanner.hasNext()) {
                 String word = textScanner.next();
-                // Limpiamos puntuación básica para la búsqueda
+
                 String cleanWord = word.replaceAll("[^a-zA-Z]", "").toLowerCase();
                 
                 Association<String, String> searchDummy = new Association<>(cleanWord, null);
